@@ -1,6 +1,5 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class LoginServiceTest {
     private LoginService loginService;
@@ -20,7 +19,7 @@ public class LoginServiceTest {
         boolean loginEfetuado = loginService.realizarLogin(email, senha);
 
         // Assert
-        Assertions.assertTrue(loginEfetuado, "O login com credenciais corretas falhou.");
+        assertTrue(loginEfetuado, "O login com credenciais corretas falhou.");
     }
 
     @Test
@@ -33,7 +32,7 @@ public class LoginServiceTest {
         boolean loginEfetuado = loginService.realizarLogin(email, senha);
 
         // Assert
-        Assertions.assertFalse(loginEfetuado, "O login com credenciais incorretas não falhou.");
+        assertFalse(loginEfetuado, "O login com credenciais incorretas não falhou.");
     }
 }
 
